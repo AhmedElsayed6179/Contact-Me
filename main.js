@@ -30,8 +30,27 @@ document.addEventListener('DOMContentLoaded', () => {
         xhr.open('POST', 'https://formspree.io/f/xrelbplz');
 
         xhr.onload = () => {
-            button.innerHTML = 'Sent successfully ✔';
-            form.reset();
+            if (xhr.status >= 200 && xhr.status < 300) {
+                button.innerHTML = 'Sent successfully ✔';
+                form.reset();
+
+                setTimeout(() => {
+                    button.disabled = false;
+                    button.innerHTML = originalText;
+                }, 4000);
+            } 
+            else {
+                button.innerHTML = 'Failed to send ✖';
+
+                setTimeout(() => {
+                    button.disabled = false;
+                    button.innerHTML = originalText;
+                }, 4000);
+            }
+        };
+
+        xhr.onerror = () => {
+            button.innerHTML = 'Network error ✖';
 
             setTimeout(() => {
                 button.disabled = false;
@@ -39,18 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 4000);
         };
 
-        xhr.onerror = () => {
-            button.innerHTML = 'Sent ✔';
-            form.reset();
-
-            setTimeout(() => {
-                button.disabled = false;
-                button.innerHTML = originalText;
-            }, 3000);
-        };
-
         xhr.send(formData);
     });
 });
-
 document.getElementById("year").textContent = new Date().getFullYear();
