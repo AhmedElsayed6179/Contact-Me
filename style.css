@@ -90,13 +90,12 @@ p {
 }
 
 .me {
-    color: #1E90FF;
+    color: #fff;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s, text-decoration 0.3s;
 }
 
 .me:hover {
-    color: #fff;
     text-decoration: underline;
 }
