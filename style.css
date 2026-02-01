@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #0f0f12;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-section {
+    width: 100%;
+    padding: 20px;
+}
+
+.card {
+    max-width: 420px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+}
+
+h2 {
+    margin: 0 0 8px;
+    text-align: center;
+}
+
+.subtitle {
+    text-align: center;
+    color: #aaa;
+    font-size: 14px;
+    margin-bottom: 24px;
+}
+
+.field {
+    margin-bottom: 16px;
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 6px;
+    color: #ccc;
+}
+
+input,
+textarea {
+    width: 100%;
+    background: #141418;
+    border: 1px solid #2a2a2f;
+    border-radius: 8px;
+    padding: 10px 12px;
+    color: #fff;
+    outline: none;
+    resize: none;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #fff;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #fff;
+    color: #000;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+p {
+    text-align: center;
+}
+
+.me {
+    color: #1E90FF;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+.me:hover {
+    color: #fff;
+    text-decoration: underline;
+}
