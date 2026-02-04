@@ -18,18 +18,18 @@
 
             <form id="contact-form" method="POST">
                 <div class="field">
-                    <label>Name</label>
-                    <input type="text" name="name" required placeholder="Your name">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
                 </div>
 
                 <div class="field">
-                    <label>Email</label>
-                    <input type="email" name="email" placeholder="email@example.com" required placeholder="email@example.com">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="email@example.com" required>
                 </div>
 
                 <div class="field">
-                    <label>Message</label>
-                    <textarea name="message" rows="4" required placeholder="Write your message here..."></textarea>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
                 </div>
 
                 <button type="submit" id="submit-btn">
